@@ -1,0 +1,11 @@
+.pageBox {
+  min-height: 100%;
+}
+
+.mainPage {
+  height: 100%;
+}
+
+.graphBox {
+  background-color: #ffffff;
+}

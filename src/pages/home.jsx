@@ -1,8 +1,6 @@
-import '../index.css'
+import './home.css'
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
-import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {CardWordle, Logo} from '../components/objects'
 
