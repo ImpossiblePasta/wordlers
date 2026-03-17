@@ -1,12 +1,75 @@
 
 .headerBox{
-    width: 100%;
-    height: 30px;
-    background-color: #3a3a3c;
-  }
+	/* width: 100%; */
 
-@media screen and (max-width: 1000px) {
-  .headerBox{
-    height: 60px;
-  }
+	background-color: #121213;
+
+	overflow: hidden;
+	padding: 0px 9px;
+
+	/* display: flex;
+	flex-direction: row;
+	align-items: center; */
+}
+
+.homeButton {
+	height:50px;
+	margin: 5px 0px;
+
+	float: left;
+
+	display: flex;
+	flex-direction: row;
+
+	align-items: center;
+	text-align: center;
+}
+
+.homeButton h1 {
+	font-size: 25px;
+	font-weight: bold;
+	margin: 0 10px;
+	
+	color: #f8f8f8;
+
+	transition: 0.3s;
+}
+
+a:hover h1 {
+	color: #f8f8f8;
+}
+
+.title {
+	height:50px;
+	margin: 5px 0px;
+
+	float: left;
+
+	display: flex;
+	flex-direction: row;
+
+	align-items: center;
+	text-align: center;
+}
+
+.title span {
+	color: #3a3a3c;
+}
+
+.buttonBox {
+	float: right;
+	margin: 9px 0px;
+}
+
+@media screen and (max-width: 700px) {
+	.homeButton h1, .title {
+		margin: 0px;
+    	content-visibility: hidden;
+	}
+
+	
+
+	.headerBox{
+		height: 60px;
+	}
 }

@@ -29,7 +29,7 @@ function Home() {
 
   return(
     <div className="homeBox">
-      <div className='homeLogo'><Logo/></div>
+      <div className='homeLogo'><Logo size='120px'/></div>
       <Stack className='wordleRow' direction="row">
         <CardWordle letter='W'/>
         <CardWordle letter='O'/>

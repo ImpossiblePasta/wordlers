@@ -12,7 +12,10 @@ function December2025() {
 
   return(
     <div className='pageBox'>
-      <Header />
+      <Header title='December 2025'
+        lastMonth={"2025nov"} nextMonth={"2026jan"} 
+        lastActive={false} nextActive={false} />
+
       <div className='mainPage'>
         <h2>DECEMEBER 2025</h2>
         <Box sx={{ 
