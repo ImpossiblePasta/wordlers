@@ -5,16 +5,27 @@
 	background-color: #121213;
 
 	overflow: hidden;
-	padding: 0px 9px;
+
+	transition: height 0.5s ease;
 
 	/* display: flex;
 	flex-direction: row;
 	align-items: center; */
 }
 
+.headerTop {
+	/* set the box to  */
+	height: 60px;
+}
+
+.headerBand {
+	/* set the box to  */
+	width: 100%;
+}
+
 .homeButton {
 	height:50px;
-	margin: 5px 0px;
+	margin: 5px 0px 5px 10px;
 
 	float: left;
 
@@ -34,6 +45,13 @@
 
 	transition: 0.3s;
 }
+
+.headerBox hr {
+	display: none;
+	margin: 1px auto;
+}
+
+
 
 a:hover h1 {
 	color: #f8f8f8;
@@ -61,15 +79,105 @@ a:hover h1 {
 	margin: 9px 0px;
 }
 
+.menuButton {
+	content-visibility: hidden;
+	margin: 5px 0px 5px 0px;
+}
+
+.hashButtonBlock{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.hashButton {
+	transition: .8s;
+
+	width: 90px;
+	height: 20px;
+	padding: 11px 8px;
+
+	border-radius: 5px 5px 0px 0px;
+}
+
+.hashButton.active {
+	color: #538d4e;
+	border-bottom: solid 2px #538d4e;
+	background-color: #254023;
+}
+
+.hashButton:hover {
+	color: #538d4e;
+}
+
+
 @media screen and (max-width: 700px) {
+	.headerBox {
+		/* limit the size of the box */
+		height: 60px;
+	}
+
+	.headerBox.open {
+		/* limit the size of the box */
+		height: 279px;
+	}
+
+	.headerTop {
+		/* increase the size of the box */
+		height: auto;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.headerBand {
+		/* set the box to max width */
+		width: 100%;
+		height: 60px;
+	}
+
 	.homeButton h1, .title {
 		margin: 0px;
     	content-visibility: hidden;
 	}
 
-	
-
-	.headerBox{
-		height: 60px;
+	.menuButton {
+    	content-visibility: visible;
+		float: right;
 	}
+
+	.buttonBox {
+    	display: flex;
+		flex-direction: column;
+		margin: 0px;
+	}
+
+	.headerBox hr {
+		display: block;
+		margin: 1px auto;
+		margin-left: 0px;
+	}
+
+	.hashButtonBlock {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.hashButton {
+		width: 100%;
+		padding: 11px 0px;
+		border-radius: 0px;
+	}
+
+	.hashButton.active {
+		border-left: solid 2px #538d4e;
+		border-bottom: none;
+	}
+
 }

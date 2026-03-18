@@ -30,7 +30,7 @@ const theme = createTheme({
   }
 });
 
-export function Header({title="TITLE YEAR", lastMonth, lastActive=true, nextMonth, nextActive=true}) {
+export function Header({title="TITLE YEAR", hash, lastMonth, lastActive=true, nextMonth, nextActive=true}) {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const buttonStyle = { fontSize: "34px", color: '#f8f8f8', };
@@ -42,33 +42,67 @@ export function Header({title="TITLE YEAR", lastMonth, lastActive=true, nextMont
 
     return (
         // html header accounting for screensize
-        <div className="headerBox">
-            {/* HOLD THE LOGO */}
-            <a className='homeButton' href="/">
-                <Logo size='50px'/>
-                <h1>WORDLERS</h1>
-            </a>
-            <div className='title'>
-                <p>
-                    <span>/</span> {title}
-                </p>
-            </div>
-            
-            {/* HOLD MENU BUTTON ONLY USED ON SMALL SCREENS */}
-            {/* <IconButton
-                onClick={() => setMenuOpen(!menuOpen)} >
-                    {GetIcon()}
-            </IconButton> */}
+        <div className={menuOpen ? "headerBox open" : "headerBox"} >
+            {/* THE TOP OF THE HEADER THAT IS SPLIT ON SMALL SCREENS */}
+            <div className='headerTop'>
+                <div className='headerBand'>
+                    {/* HOLD THE LOGO */}
+                    <a className='homeButton' href="/">
+                        <Logo size='50px'/>
+                        <h1>WORDLERS</h1>
+                    </a>
+                    <div className='title'>
+                        <p>
+                            <span>/</span> {title}
+                        </p>
+                    </div>
+                    
+                    {/* HOLD MENU BUTTON ONLY USED ON SMALL SCREENS */}
+                    <div className='menuButton'>
+                        <IconButton 
+                            onClick={() => setMenuOpen(!menuOpen)} >
+                                {GetIcon()}
+                        </IconButton>
+                    </div>
+                    
+                </div>
+                
+                {/* Hold the buttons for next and last page */}
 
-            {/* Hold the buttons for next and last page */}
-            <div className='buttonBox'>
-                <ThemeProvider theme={theme}>
-                    <Button disabled={!lastActive} size='large' href={"/"+lastMonth}
-                        startIcon={<ChevronLeftIcon />}>{lastMonth}</Button>
-                    <Button disabled={!nextActive} size='large' href={"/"+nextMonth}
-                    endIcon={<ChevronRightIcon />}>{nextMonth}</Button>
-                </ThemeProvider>
+                <hr color='#3a3a3c' width='100%'/>
+
+                <div className='buttonBox'>
+                    <ThemeProvider theme={theme}>
+                        <Button disabled={!lastActive} size='large' href={"/"+lastMonth}
+                            startIcon={<ChevronLeftIcon />}>{lastMonth}</Button>
+                        <Button disabled={!nextActive} size='large' href={"/"+nextMonth}
+                        endIcon={<ChevronRightIcon />}>{nextMonth}</Button>
+                    </ThemeProvider>
+                </div>
+
             </div>
+                
+
+            {/* BELOW THE BUTTON BOX INCLUDE THE MENU */}
+
+            <hr color='#3a3a3c' width='100%'/>
+
+            <div className='hashButtonBlock'>
+                <a className={(hash!='award' && hash!='data') ? "hashButton active" : "hashButton"}
+                    href='#graph'>
+                    GRAPHS
+                </a>
+                <a className={hash=='award' ? "hashButton active" : "hashButton"}
+                    href='#award'>
+                    AWARDS
+                </a>
+                <a className={hash=='data' ? "hashButton active" : "hashButton"}
+                    href='#data'>
+                    DATA
+                </a>
+                
+            </div>
+
         </div>
     );
 }
