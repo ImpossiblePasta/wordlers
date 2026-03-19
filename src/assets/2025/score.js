@@ -1,5 +1,14 @@
 const X="X"
 const na="na"
+
+export const keys = {Eve:"Eve", 
+    Joey:"Joey", 
+    Kath:"Kath", 
+    Murphy:"Murphy", 
+    Sarah:"Sarah", 
+    Till:"Till", 
+    Twig:"Twig"}
+
 export const scoreData = [
 { date: new Date(2025, 12, 1), Eve:4,Joey:6,Kath:3,Murphy:2,Sarah:2,Till:3,Twig:4},
 { date: new Date(2025, 12, 2), Eve:4,Joey:5,Kath:4,Murphy:4,Sarah:5,Till:5,Twig:6},
@@ -32,4 +41,22 @@ export const scoreData = [
 { date: new Date(2025, 12, 29), Eve:1,Joey:5,Kath:4,Murphy:3,Sarah:4,Till:4,Twig:3},
 { date: new Date(2025, 12, 30), Eve:4,Joey:3,Kath:5,Murphy:3,Sarah:4,Till:4,Twig:3},
 { date: new Date(2025, 12, 31), Eve:2,Joey:6,Kath:3,Murphy:3,Sarah:4,Till:4,Twig:3},
+];
+
+
+export const playerData = [
+    { name:'Eve', dec1:1, dec2:3, dec3:5, dec4:7, dec5:'na', dec6:0, dec7:'X', dec8:5, dec9:5,
+        info: [
+            { fact: 'total', value: 100 },
+            { fact: 'average', value: 5 },
+            { fact: 'missed', value: 2 },
+        ]
+     },
+    { name:'Twig', dec1:1, dec2:3, dec3:5, dec4:7, dec5:'na', dec6:0, dec7:'X', dec8:5, dec9:5,
+        info: [
+            { fact: 'total', value: 99 },
+            { fact: 'average', value: 4 },
+            { fact: 'missed', value: 5 },
+        ]
+     },
 ];
