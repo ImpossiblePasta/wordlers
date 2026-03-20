@@ -1,5 +1,4 @@
 import { useState, Fragment } from 'react';
-import { playerData } from '../assets/2025/score';
 
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
@@ -98,14 +97,14 @@ function Row(props) {
 }
 
 
-export function ExpandingTable({dataSet, monthCode='Jan', date="MONTH YEAR"}) {
+export function ExpandingTable({dataSet, date="MONTH YEAR"}) {
 
     
-    const days = Object.keys(playerData[0]).length -2;
+    const days = Object.keys(dataSet[0]).length -2;
 
     return (
         <Box sx={{ maxWidth: '90%', background:'#121213', borderRadius:2, padding:'10px 5px', }}>
-            <Box sx={{ background: '#121213', }}>{date}</Box>
+            <Box sx={{ background: '#121213', padding: '10px 0px 10px 0px', textAlign:'center', fontSize:'18px', }}>{date}</Box>
             <TableContainer component={Paper} sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                 <Table stickyHeader size="small" aria-label="score table">
                     <TableHead>
@@ -113,7 +112,7 @@ export function ExpandingTable({dataSet, monthCode='Jan', date="MONTH YEAR"}) {
                             {/* Sticky Header Cells */}
                             <TableCell align='center'
                             sx={{
-                                minWidth: '50px',
+                                minWidth: '60px',
                                 position: 'sticky',
                                 left: 0,
                                 zIndex: 6, // Higher zIndex than body cells
@@ -132,7 +131,7 @@ export function ExpandingTable({dataSet, monthCode='Jan', date="MONTH YEAR"}) {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                    {playerData.map((row) => (
+                    {dataSet.map((row) => (
                         <Row row={row} key={row.name}/>
                     ))}
                     </TableBody>

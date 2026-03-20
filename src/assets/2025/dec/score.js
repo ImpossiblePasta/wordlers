@@ -1,13 +1,5 @@
-const X="X"
-const na="na"
-
-export const keys = {Eve:"Eve", 
-    Joey:"Joey", 
-    Kath:"Kath", 
-    Murphy:"Murphy", 
-    Sarah:"Sarah", 
-    Till:"Till", 
-    Twig:"Twig"}
+const X="X";
+const na="na";
 
 export const scoreData = [
 { date: new Date(2025, 12, 1), Eve:4,Joey:6,Kath:3,Murphy:2,Sarah:2,Till:3,Twig:4},
@@ -43,20 +35,23 @@ export const scoreData = [
 { date: new Date(2025, 12, 31), Eve:2,Joey:6,Kath:3,Murphy:3,Sarah:4,Till:4,Twig:3},
 ];
 
-
-export const playerData = [
-    { name:'Eve', dec1:1, dec2:3, dec3:5, dec4:7, dec5:'na', dec6:0, dec7:'X', dec8:5, dec9:5,
-        info: [
-            { fact: 'total', value: 100 },
-            { fact: 'average', value: 5 },
-            { fact: 'missed', value: 2 },
-        ]
-     },
-    { name:'Twig', dec1:1, dec2:3, dec3:5, dec4:7, dec5:'na', dec6:0, dec7:'X', dec8:5, dec9:5,
-        info: [
-            { fact: 'total', value: 99 },
-            { fact: 'average', value: 4 },
-            { fact: 'missed', value: 5 },
-        ]
-     },
+export const barData = [
+	{ name:'Eve', dec:113 },
+	{ name:'Joey', dec:146 },
+	{ name:'Kath', dec:118 },
+	{ name:'Murphy', dec:101 },
+	{ name:'Sarah', dec:132 },
+	{ name:'Till', dec:133 },
+	{ name:'Twig', dec:130 },
 ];
+
+
+// export const barData = [
+// 	{ name:'Eve', values: [ { month:dec, score:113 } ] },
+// 	{ name:'Joey', values: [ { month:dec, score:146 } ] },
+// 	{ name:'Kath', values: [ { month:dec, score:118 } ] },
+// 	{ name:'Murphy', values: [ { month:dec, score:101 } ] },
+// 	{ name:'Sarah', values: [ { month:dec, score:132 } ] },
+// 	{ name:'Till', values: [ { month:dec, score:133 } ] },
+// 	{ name:'Twig', values: [ { month:dec, score:130 } ] },
+// ];

@@ -1,6 +1,6 @@
 .pageBox {
   min-height: 100%;
-  background-color: #f8f8f8;
+  background-color: #3a3a3c;
   /* background-color: #3a3a3c; */
 }
 
@@ -9,12 +9,20 @@
 }
 
 .graphBox {
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 100%;
+  margin: 3% 0px;
 }
 
 .dataBox {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   margin: 3% 0px;
 }
