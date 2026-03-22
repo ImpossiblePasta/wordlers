@@ -5,10 +5,13 @@ import { useEffect, useState } from 'react';
 import { Header } from '../components/pagebody';
 import { LineGraph, BarGraph } from '../components/graphs';
 import { ExpandingTable } from '../components/tables';
+import { AwardBox } from '../components/awards.jsx';
 
 import { colors, keys } from '../assets/2025/info.js';
 import { scoreData, barData } from '../assets/2025/dec/score.js';
 import { playerData } from '../assets/2025/dec/table.js';
+
+import { lowestScore, lowestVarience, bestDay, leastMissed } from '../assets/2025/dec/award.js';
 
 import { Button } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -75,7 +78,17 @@ function December2025() {
 
         { hash == 'award' &&
           <div className='awardBox'>
-            <h2>DIV 2</h2>
+            <AwardBox data={lowestScore} name="TOP WORDLER" 
+              quote='"the best wordler in town"' />
+
+            <AwardBox data={lowestVarience} name="CONSISTENCY" 
+              quote='"the wordler you could bet on"' />
+
+            <AwardBox data={bestDay} name="BEST DAY" 
+              quote='"who shined one day this month"' />
+
+            <AwardBox data={leastMissed} name="DEVOTED GAMER" 
+              quote='"the wordler who never gave up"' />
           </div>
         }
         
