@@ -1,8 +1,6 @@
-import '../index.css'
+import './home.css'
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
-import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {CardWordle, Logo} from '../components/objects'
 
@@ -31,7 +29,7 @@ function Home() {
 
   return(
     <div className="homeBox">
-      <div className='homeLogo'><Logo/></div>
+      <div className='homeLogo'><Logo size='120px'/></div>
       <Stack className='wordleRow' direction="row">
         <CardWordle letter='W'/>
         <CardWordle letter='O'/>
@@ -46,8 +44,8 @@ function Home() {
       <Stack spacing={2} direction="column" minWidth='300px' width='50%' margin='0 auto 0 auto' >
         <ThemeProvider theme={theme}>
           <Button size='large' href="/2025dec">December 2025</Button>
-          <Button size='large' href="/2026jan">January 2026</Button>
-          <Button size='large' href="/2026feb">February 2026</Button>
+          <Button disabled size='large' href="/2026jan">January 2026</Button>
+          <Button disabled size='large' href="/2026feb">February 2026</Button>
           <Button disabled size='large' href="/2026mar">March 2026</Button>
         </ThemeProvider>
       </Stack>

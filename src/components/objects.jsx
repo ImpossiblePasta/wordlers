@@ -42,7 +42,7 @@ export function CardWordle({letter}) {
 
 
 // The animated Logo Object 
-export function Logo() {
+export function Logo({size}) {
 
     // Logo Animation variables
     const time = 1000; const ratio = 1200;
@@ -150,7 +150,9 @@ export function Logo() {
         //Un
         <div className='logoBox' 
             onMouseEnter={() => OnEnter()}
-            onMouseLeave={() => OnExit()}>
+            onMouseLeave={() => OnExit()}
+            style={{width:size, height:size}}
+            >
             <div className='logoCard' 
                 style={{transform: 'rotateX('+cardRotations[0]+'deg)',
                     transition: 'transform '+(time/ratio)+'s'
