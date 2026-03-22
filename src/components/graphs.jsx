@@ -54,18 +54,18 @@ export function LineGraph({scoreData, keys, colors, dateString="MONTH YEAR", mon
 };
 
 const listSeries = [
-    { dataKey: 'jan', label:'JAN', stack:'total' },
-    { dataKey: 'feb', label:'FEB', stack:'total' },
-    { dataKey: 'mar', label:'MAR', stack:'total' },
-    { dataKey: 'apr', label:'APR', stack:'total' },
-    { dataKey: 'may', label:'MAY', stack:'total' },
-    { dataKey: 'jun', label:'JUN', stack:'total' },
-    { dataKey: 'jul', label:'JUL', stack:'total' },
-    { dataKey: 'aug', label:'AUG', stack:'total' },
-    { dataKey: 'sep', label:'SEP', stack:'total' },
-    { dataKey: 'oct', label:'OCT', stack:'total' },
-    { dataKey: 'nov', label:'NOV', stack:'total' },
-    { dataKey: 'dec', label:'DEC', stack:'total' },
+    { dataKey: 'Jan', label:'JAN', stack:'total' },
+    { dataKey: 'Feb', label:'FEB', stack:'total' },
+    { dataKey: 'Mar', label:'MAR', stack:'total' },
+    { dataKey: 'Apr', label:'APR', stack:'total' },
+    { dataKey: 'May', label:'MAY', stack:'total' },
+    { dataKey: 'Jun', label:'JUN', stack:'total' },
+    { dataKey: 'Jul', label:'JUL', stack:'total' },
+    { dataKey: 'Aug', label:'AUG', stack:'total' },
+    { dataKey: 'Sep', label:'SEP', stack:'total' },
+    { dataKey: 'Oct', label:'OCT', stack:'total' },
+    { dataKey: 'Nov', label:'NOV', stack:'total' },
+    { dataKey: 'Dec', label:'DEC', stack:'total' },
 ];
 
 export function BarGraph({scoreData, keys, colors, dateString="MONTH YEAR", months=-1}){

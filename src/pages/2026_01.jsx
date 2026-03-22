@@ -1,4 +1,4 @@
-import './2025.css'
+import './2026.css'
 import { useEffect, useState } from 'react';
 
 
@@ -7,13 +7,13 @@ import { LineGraph, BarGraph } from '../components/graphs';
 import { ExpandingTable } from '../components/tables';
 import { AwardBox } from '../components/awards.jsx';
 
-import { Icons } from '../assets/2025/dec/icons';
+import { Icons } from '../assets/2026/jan/icons';
 
-import { colors, keys } from '../assets/2025/info.js';
-import { scoreData, barData } from '../assets/2025/dec/score.js';
-import { playerData } from '../assets/2025/dec/table.js';
+import { colors, keys } from '../assets/2026/info.js';
+import { scoreData, barData } from '../assets/2026/jan/score.js';
+import { playerData } from '../assets/2026/jan/table.js';
 
-import { lowestScore, lowestVarience, bestDay, leastMissed, duoClosestScores, duoHighVar } from '../assets/2025/dec/award.js';
+import { lowestScore, lowestVarience, bestDay, leastMissed, highestImprovement, duoClosestScores, duoHighVar } from '../assets/2026/jan/award.js';
 
 import { Button } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -46,7 +46,7 @@ const theme = createTheme({
 });
 
 
-function December2025() {
+function January2026() {
 
 
   const getHash = () => typeof window !== 'undefined' ? window.location.hash.replace("#", "") : "";
@@ -60,22 +60,22 @@ function December2025() {
 
   return(
     <div className='pageBox'> 
-      <Header title='December 2025' hash={hash}
-        lastMonth={"2025nov"} nextMonth={"2026jan"} 
-        lastActive={false} nextActive={true} />
+      <Header title='JANUARY 2026' hash={hash}
+        lastMonth={"2025dec"} nextMonth={"2026feb"} 
+        lastActive={true} nextActive={true} />
 
       <div className='mainPage'>
 
         {(hash!='award' && hash!='data') && 
         <div className='graphBox'>
             <LineGraph scoreData={scoreData} colors={colors} keys={keys} 
-              dateString="DECEMBER 2025" monthCode='DEC'
-              minDate={new Date(2025, 12, 1)}
-              maxDate={new Date(2025, 12, 31)}
+              dateString="JANUARY 2026" monthCode='JAN'
+              minDate={new Date(2026, 1, 1)}
+              maxDate={new Date(2026, 1, 31)}
               />
 
             <BarGraph scoreData={barData} colors={colors} keys={keys} 
-              dateString="DECEMBER 2025" monthCode='DEC'/>
+              dateString="JANUARY 2026" monthCode='JAN' months={1}/>
         </div> }
 
         { hash == 'award' &&
@@ -86,12 +86,15 @@ function December2025() {
             <AwardBox icons={Icons} data={lowestVarience} name="GAY ARROW" 
               quote='"the wordler you could bet on"' />
 
-            <AwardBox icons={Icons} data={bestDay} name="BEST DAY EVER" 
+            <AwardBox icons={Icons} data={highestImprovement} name="MOST IMPROVED" 
+              quote='"who came back this month stronger"' />
+
+            <AwardBox icons={Icons} data={bestDay} name="BEST DAY" 
               quote='"who shined one day this month"' />
 
             <AwardBox icons={Icons} data={leastMissed} name="DEVOTED GAMER" 
               quote='"the wordler who never gave up"' />
-
+              
             <AwardBox icons={Icons} double={true} data={duoClosestScores} name="DOUBLE TROUBLE" 
               quote='"the duo who scored the closest together"' />
 
@@ -102,11 +105,11 @@ function December2025() {
         
         { hash == 'data' &&
           <div className='dataBox'>
-              <ExpandingTable dataSet={playerData} date='DECEMBER 2025 DATA'/>
+              <ExpandingTable dataSet={playerData} date='JANUARY 2026 DATA'/>
               {/* BELOW THE DATA TABLE HAVE A DOWNLOAD BUTTON */}
               <ThemeProvider theme={theme}>
                 <Button variant="contained" 
-                  href='../assets/2025/dec/december2025.xlsx' download="december2025.xlsx" 
+                  href='../assets/2026/jan/january2026.xlsx' download="january2026.xlsx" 
                   endIcon={<DownloadIcon />}>
                   DOWNLOAD EXCEL
                 </Button>
@@ -123,4 +126,4 @@ function December2025() {
   );
 }
 
-export default December2025;
+export default January2026;
