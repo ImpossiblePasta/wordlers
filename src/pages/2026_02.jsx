@@ -1,19 +1,18 @@
 import './hub.css'
 import { useEffect, useState } from 'react';
 
-
 import { Header } from '../components/pagebody';
 import { LineGraph, BarGraph, PieGraph } from '../components/graphs';
 import { ExpandingTable } from '../components/tables';
 import { AwardBox } from '../components/awards.jsx';
 
-import { Icons } from '../assets/2025/dec/icons';
+import { Icons } from '../assets/2026/feb/icons';
 
-import { colors, keys } from '../assets/2025/info.js';
-import { scoreData, barData, pieData } from '../assets/2025/dec/score.js';
-import { playerData } from '../assets/2025/dec/table.js';
+import { colors, keys } from '../assets/2026/info.js';
+import { scoreData, barData, pieData } from '../assets/2026/feb/score.js';
+import { playerData } from '../assets/2026/feb/table.js';
 
-import { lowestScore, lowestVarience, bestDay, leastMissed, duoClosestScores, duoHighVar } from '../assets/2025/dec/award.js';
+import { lowestScore, lowestVarience, bestDay, leastMissed, highestImprovement, duoClosestScores, duoHighVar } from '../assets/2026/feb/award.js';
 
 import { Button } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -46,7 +45,7 @@ const theme = createTheme({
 });
 
 
-function December2025() {
+function February2026() {
 
 
   const getHash = () => typeof window !== 'undefined' ? window.location.hash.replace("#", "") : "";
@@ -60,24 +59,24 @@ function December2025() {
 
   return(
     <div className='pageBox'> 
-      <Header title='December 2025' hash={hash}
-        lastMonth={"2025nov"} nextMonth={"2026jan"} 
-        lastActive={false} nextActive={true} />
+      <Header title='FEBRUARY 2026' hash={hash}
+        lastMonth={"2026jan"} nextMonth={"2026mar"} 
+        lastActive={true} nextActive={false} />
 
       <div className='mainPage'>
 
         {(hash!='award' && hash!='data') && 
         <div className='graphBox'>
             <LineGraph scoreData={scoreData} colors={colors} keys={keys} 
-              dateString="DECEMBER 2025" monthCode='DEC'
-              minDate={new Date(2025, 12, 1)}
-              maxDate={new Date(2025, 12, 31)}
+              dateString="FEBRUARY 2026" monthCode='FEB'
+              minDate={new Date(2026, 2, 1)}
+              maxDate={new Date(2026, 2, 28)}
               />
 
             <BarGraph scoreData={barData} colors={colors} keys={keys} 
-              dateString="DECEMBER TOTAL" monthCode='DEC'/>
-
-            <PieGraph pieData={pieData} dateString="DECEMBER 2025"/>
+              dateString="2026 YEAR TOTAL" monthCode='FEB' months={2}/>
+              
+            <PieGraph pieData={pieData} dateString="FEBRUARY 2026"/>
         </div> }
 
         { hash == 'award' &&
@@ -88,12 +87,15 @@ function December2025() {
             <AwardBox icons={Icons} data={lowestVarience} name="STRAIGHT ARROW" 
               quote='"the wordler you could bet on"' />
 
-            <AwardBox icons={Icons} data={bestDay} name="BEST DAY EVER" 
+            <AwardBox icons={Icons} data={highestImprovement} name="MOST IMPROVED" 
+              quote='"who came back this month stronger"' />
+
+            <AwardBox icons={Icons} data={bestDay} name="BEST DAY" 
               quote='"who shined one day this month"' />
 
             <AwardBox icons={Icons} data={leastMissed} name="DEVOTED GAMER" 
               quote='"the wordler who never gave up"' />
-
+              
             <AwardBox icons={Icons} double={true} data={duoClosestScores} name="DOUBLE TROUBLE" 
               quote='"the duo who scored the closest together"' />
 
@@ -104,11 +106,11 @@ function December2025() {
         
         { hash == 'data' &&
           <div className='dataBox'>
-              <ExpandingTable dataSet={playerData} date='DECEMBER 2025 DATA'/>
+              <ExpandingTable dataSet={playerData} date='FEBRUARY 2026 DATA'/>
               {/* BELOW THE DATA TABLE HAVE A DOWNLOAD BUTTON */}
               <ThemeProvider theme={theme}>
                 <Button variant="contained" 
-                  href={'https://raw.githubusercontent.com/ImpossiblePasta/wordlers/main/src/assets/2025/dec/december2025.xlsx'} 
+                  href={'https://raw.githubusercontent.com/ImpossiblePasta/wordlers/main/src/assets/2025/feb/february2025.xlsx'} 
                   endIcon={<DownloadIcon />}>
                   DOWNLOAD EXCEL
                 </Button>
@@ -125,4 +127,4 @@ function December2025() {
   );
 }
 
-export default December2025;
+export default February2026;

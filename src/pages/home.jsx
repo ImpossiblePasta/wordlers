@@ -44,8 +44,8 @@ function Home() {
       <Stack spacing={2} direction="column" minWidth='300px' width='50%' margin='0 auto 0 auto' >
         <ThemeProvider theme={theme}>
           <Button size='large' href="/2025dec">December 2025</Button>
-          <Button disabled size='large' href="/2026jan">January 2026</Button>
-          <Button disabled size='large' href="/2026feb">February 2026</Button>
+          <Button size='large' href="/2026jan">January 2026</Button>
+          <Button size='large' href="/2026feb">February 2026</Button>
           <Button disabled size='large' href="/2026mar">March 2026</Button>
         </ThemeProvider>
       </Stack>
