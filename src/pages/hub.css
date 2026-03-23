@@ -10,8 +10,9 @@
 
 .graphBox {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 
   max-width: 100%;
