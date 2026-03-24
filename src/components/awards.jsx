@@ -9,6 +9,7 @@ import AvatarGroup from '@mui/material/AvatarGroup';
 import Tooltip from '@mui/material/Tooltip';
 
 
+
 function AvatarPlus({name, fact, size, icons}) {
     return ( 
         <Tooltip arrow title={<><div>{name}</div><div>{fact}</div></>}
@@ -18,7 +19,7 @@ function AvatarPlus({name, fact, size, icons}) {
             src={icons[name]} 
             sx={{ width: size, height: size,
                 bgcolor: '#121213',
-             }} />
+                }} /> 
         </Tooltip>
     );
 }
