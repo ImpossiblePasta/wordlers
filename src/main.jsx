@@ -8,6 +8,7 @@ import Info from './pages/info';
 import December2025 from './pages/2025_12';
 import January2026 from './pages/2026_01';
 import February2026 from './pages/2026_02';
+import March2026 from './pages/2026_03';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
       <Route exact path='/2025dec' element={<December2025/>} />
       <Route exact path='/2026jan' element={<January2026/>} />
       <Route exact path='/2026feb' element={<February2026/>} />
+      <Route exact path='/2026mar' element={<March2026/>} />
     </Routes>
   </BrowserRouter>
 )

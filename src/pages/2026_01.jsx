@@ -101,7 +101,7 @@ function January2026() {
               quote='"the duo who scored the closest together"' />
 
             <AwardBox icons={Icons} double={true} data={duoHighVar} name="ODD COUPLE" 
-              quote='"the strogest pair in a wordle fight"' />
+              quote='"the strongest pair in a wordle fight"' />
           </div>
         }
         
