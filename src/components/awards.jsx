@@ -85,7 +85,7 @@ export function AwardBox({data, name="GAME", quote="quote", icons, double=false}
                         
                     </div>
                 }
-                {data.forth != null && 
+                {data.second != null && 
                     <div className='podium second'>
                         <p>2nd</p>
                         { (!double) ? 
@@ -95,7 +95,7 @@ export function AwardBox({data, name="GAME", quote="quote", icons, double=false}
                         
                     </div>
                 }
-                {data.forth != null && 
+                {data.third != null && 
                     <div className='podium third'>
                         <p>3rd</p>
                         { (!double) ? 
