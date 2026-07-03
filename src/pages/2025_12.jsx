@@ -108,7 +108,9 @@ function December2025() {
               {/* BELOW THE DATA TABLE HAVE A DOWNLOAD BUTTON */}
               <ThemeProvider theme={theme}>
                 <Button variant="contained" 
-                  href={'public/WORDLERS_december2025.xlsx'} 
+                  href={'/public/WORDLERS_december2025.xlsx'}
+                  download="WORDLERS_2025_12.xlsx"
+                  target="_blank"
                   endIcon={<DownloadIcon />}>
                   DOWNLOAD EXCEL
                 </Button>

@@ -110,7 +110,9 @@ function June2026() {
               {/* BELOW THE DATA TABLE HAVE A DOWNLOAD BUTTON */}
               <ThemeProvider theme={theme}>
                 <Button variant="contained" 
-                  href={'public/WORDLERS_june2026.xlsx'} 
+                  href={'/public/WORDLERS_june2026.xlsx'} 
+                  download="WORDLERS_2026_06.xlsx"
+                  target="_blank"
                   endIcon={<DownloadIcon />}>
                   DOWNLOAD EXCEL
                 </Button>
