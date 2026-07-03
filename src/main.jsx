@@ -11,6 +11,7 @@ import February2026 from './pages/2026_02';
 import March2026 from './pages/2026_03';
 import April2026 from './pages/2026_04';
 import May2026 from './pages/2026_05';
+import June2026 from './pages/2026_06';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -24,6 +25,8 @@ createRoot(document.getElementById('root')).render(
       <Route exact path='/2026mar' element={<March2026/>} />
       <Route exact path='/2026apr' element={<April2026/>} />
       <Route exact path='/2026may' element={<May2026/>} />
+      <Route exact path='/2026jun' element={<June2026/>} />
+      {/* <Route exact path='/2026jul' element={<July2026/>} /> */}
     </Routes>
   </BrowserRouter>
 )

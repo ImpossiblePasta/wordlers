@@ -110,7 +110,7 @@ function March2026() {
               {/* BELOW THE DATA TABLE HAVE A DOWNLOAD BUTTON */}
               <ThemeProvider theme={theme}>
                 <Button variant="contained" 
-                  href={'https://raw.githubusercontent.com/ImpossiblePasta/wordlers/main/src/assets/2026/mar/march2026.xlsx'} 
+                  href={'public/WORDLERS_march2026.xlsx'} 
                   endIcon={<DownloadIcon />}>
                   DOWNLOAD EXCEL
                 </Button>

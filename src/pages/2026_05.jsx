@@ -61,7 +61,7 @@ function May2026() {
     <div className='pageBox'> 
       <Header title='MAY 2026' hash={hash}
         lastMonth={"2026apr"} nextMonth={"2026jun"} 
-        lastActive={true} nextActive={false} />
+        lastActive={true} nextActive={true} />
 
       <div className='mainPage'>
 
@@ -110,7 +110,7 @@ function May2026() {
               {/* BELOW THE DATA TABLE HAVE A DOWNLOAD BUTTON */}
               <ThemeProvider theme={theme}>
                 <Button variant="contained" 
-                  href={'https://raw.githubusercontent.com/ImpossiblePasta/wordlers/main/src/assets/2026/may/may2026.xlsx'} 
+                  href={'public/WORDLERS_may2026.xlsx'} 
                   endIcon={<DownloadIcon />}>
                   DOWNLOAD EXCEL
                 </Button>

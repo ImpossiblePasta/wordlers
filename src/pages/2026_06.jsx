@@ -6,13 +6,13 @@ import { LineGraph, BarGraph, PieGraph } from '../components/graphs';
 import { ExpandingTable } from '../components/tables';
 import { AwardBox } from '../components/awards.jsx';
 
-import { Icons } from '../assets/2026/apr/icons';
+import { Icons } from '../assets/2026/jun/icons';
 
 import { colors, keys } from '../assets/2026/info.js';
-import { scoreData, barData, pieData } from '../assets/2026/apr/score.js';
-import { playerData } from '../assets/2026/apr/table.js';
+import { scoreData, barData, pieData } from '../assets/2026/jun/score.js';
+import { playerData } from '../assets/2026/jun/table.js';
 
-import { lowestScore, lowestVarience, bestDay, leastMissed, highestImprovement, duoClosestScores, duoHighVar } from '../assets/2026/apr/award.js';
+import { lowestScore, lowestVarience, bestDay, leastMissed, highestImprovement, duoClosestScores, duoHighVar } from '../assets/2026/jun/award.js';
 
 import { Button } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -45,7 +45,7 @@ const theme = createTheme({
 });
 
 
-function April2026() {
+function June2026() {
 
 
   const getHash = () => typeof window !== 'undefined' ? window.location.hash.replace("#", "") : "";
@@ -59,24 +59,24 @@ function April2026() {
 
   return(
     <div className='pageBox'> 
-      <Header title='APRIL 2026' hash={hash}
-        lastMonth={"2026mar"} nextMonth={"2026may"} 
-        lastActive={true} nextActive={true} />
+      <Header title='JUNE 2026' hash={hash}
+        lastMonth={"2026may"} nextMonth={"2026jul"} 
+        lastActive={true} nextActive={false} />
 
       <div className='mainPage'>
 
         {(hash!='award' && hash!='data') && 
         <div className='graphBox'>
             <LineGraph scoreData={scoreData} colors={colors} keys={keys} 
-              dateString="APRIL 2026" monthCode='APR'
-              minDate={new Date(2026, 4, 1)}
-              maxDate={new Date(2026, 4, 30)}
+              dateString="JUNE 2026" monthCode='JUN'
+              minDate={new Date(2026, 6, 1)}
+              maxDate={new Date(2026, 6, 30)}
               />
 
             <BarGraph scoreData={barData} colors={colors} keys={keys} 
-              dateString="2026 YEAR TOTAL" monthCode='APR' months={4}/>
+              dateString="2026 YEAR TOTAL" monthCode='JUN' months={6}/>
               
-            <PieGraph pieData={pieData} dateString="APRIL 2026"/>
+            <PieGraph pieData={pieData} dateString="JUNE 2026"/>
         </div> }
 
         { hash == 'award' &&
@@ -106,11 +106,11 @@ function April2026() {
         
         { hash == 'data' &&
           <div className='dataBox'>
-              <ExpandingTable dataSet={playerData} date='APRIL 2026 DATA'/>
+              <ExpandingTable dataSet={playerData} date='JUNE 2026 DATA'/>
               {/* BELOW THE DATA TABLE HAVE A DOWNLOAD BUTTON */}
               <ThemeProvider theme={theme}>
                 <Button variant="contained" 
-                  href={'public/WORDLERS_april2026.xlsx'} 
+                  href={'public/WORDLERS_june2026.xlsx'} 
                   endIcon={<DownloadIcon />}>
                   DOWNLOAD EXCEL
                 </Button>
@@ -127,4 +127,4 @@ function April2026() {
   );
 }
 
-export default April2026;
+export default June2026;
