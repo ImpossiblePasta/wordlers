@@ -110,9 +110,9 @@ function April2026() {
               {/* BELOW THE DATA TABLE HAVE A DOWNLOAD BUTTON */}
               <ThemeProvider theme={theme}>
                 <Button variant="contained" 
-                  href={'/public/WORDLERS_april2026.xlsx'} 
+                  href={'https://www.dropbox.com/scl/fi/sqditwetlr05xfxuouw7h/WORDLERS_april2026.xlsx?rlkey=f1932lvxx9g05kquh6yuvuvpy&st=kb8aez04&dl=1'} 
                   download="WORDLERS_2026_04.xlsx"
-                  target="_blank"
+                  // target="_blank"
                   endIcon={<DownloadIcon />}>
                   DOWNLOAD EXCEL
                 </Button>

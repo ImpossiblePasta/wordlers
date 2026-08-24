@@ -61,7 +61,7 @@ function June2026() {
     <div className='pageBox'> 
       <Header title='JUNE 2026' hash={hash}
         lastMonth={"2026may"} nextMonth={"2026jul"} 
-        lastActive={true} nextActive={false} />
+        lastActive={true} nextActive={true} />
 
       <div className='mainPage'>
 
@@ -110,9 +110,9 @@ function June2026() {
               {/* BELOW THE DATA TABLE HAVE A DOWNLOAD BUTTON */}
               <ThemeProvider theme={theme}>
                 <Button variant="contained" 
-                  href={'/public/WORDLERS_june2026.xlsx'} 
+                  href={'https://www.dropbox.com/scl/fi/4qn91qee5c0l680x8zhzn/WORDLERS_june2026.xlsx?rlkey=tiqvu8m4giee6yr40dg3lutne&st=lt93f14l&dl=1'} 
                   download="WORDLERS_2026_06.xlsx"
-                  target="_blank"
+                  // target="_blank"
                   endIcon={<DownloadIcon />}>
                   DOWNLOAD EXCEL
                 </Button>
